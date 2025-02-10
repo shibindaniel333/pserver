@@ -1,8 +1,11 @@
-const mongoose = require('mongoose')
-const connectString = process.env.DBCONNECTIONSTRING
+const mongoose = require("mongoose")
 
-mongoose.connect(connectString).then(res=>{
-    console.log("Connected to MongoDB")
-}).catch((err)=>{
-    console.log("Error connecting to MongoDB")
-})
+const connectionString = process.env.DBCONNECTIONSTRING;
+
+mongoose.connect(connectionString)
+  .then(res => {
+    console.log("MongoDB Atlas connected succesfully with pf server");
+  })
+  .catch((err) => {
+    console.error("MongoDB connection error:", err);
+  });

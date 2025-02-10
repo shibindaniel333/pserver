@@ -18,13 +18,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
 
-    },
-    userId:{
-        type:String,
     }
 })
 
 
 
-const users = mongoose.model('User', userSchema);
+const users = mongoose.model('user', userSchema);
 module.exports = users;
